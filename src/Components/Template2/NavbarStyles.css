@@ -1,0 +1,207 @@
+/* Navbar Container */
+.NavbarItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    /* position: absolute; */
+    top: 0px;
+    left: 50%; /* Centering the navbar */
+    transform: translateX(-50%); /* Adjust for centering */
+    z-index: 9999;
+    /* background-color: transparent; */
+    transition: background-color 0.3s ease, position 0.3s ease, box-shadow 0.3s ease;
+    padding: 0; /* No padding initially */
+    border-radius: 0; /* No rounded corners initially */
+    box-shadow: none; /* No shadow initially */
+    background-color: #128722;
+    /* background:  radial-gradient(50% 123.47% at 50% 50%, #1f6e3d 0%, #004d1a 100%), linear-gradient(121.28deg, #006837 0%, #39a845 100%), linear-gradient(360deg, #005e33 0%, #88ffb4 100%), radial-gradient(100% 164.72% at 100% 100%, #1b7930 0%, #57ff96 100%), radial-gradient(100% 148.07% at 0% 0%, #7dffa3 0%, #3b8f67 100%); */
+}
+
+
+/* Style after scrolling */
+.NavbarItems.scrolled {
+    /* background-color: rgb(17 24 39); */
+    /* background-color: #128722; */
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    border-radius: 15px; /* Rounded corners after scroll */
+    box-shadow: 0 5px 15px rgba(8, 8, 8, 0.25); /* Shadow after scroll */
+    padding: 0 30px; /* Padding after scroll */
+}
+
+/* Container for logo and title */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo Image Styling */
+
+
+.bars-bg {
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 30px;
+}
+
+.cross-bg{
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 30px;
+}
+/* Background change after scrolling */
+.NavbarItems.scrolled {
+    /* background-color: rgb(17 24 39); */
+    background-color: #24662df9;
+}
+
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 15px;
+    list-style: none;
+    align-items: center;
+    margin-right: 12px;
+    margin-bottom: 0;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.7rem 1rem;
+    white-space: nowrap;
+}
+
+.nav-links i {
+    padding-right: 10px;
+}
+
+.nav-links:hover {
+    background-color: #bccfd0;
+    border-radius: 8px;
+    color: black;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-icons {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .NavbarItems {
+        z-index: 999;
+        
+    }
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* background: rgb(31 41 55); */
+        background-color: #1e7a2a;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        opacity: 0;
+        align-items: stretch;
+        padding: 60px 0 30px 0;
+        margin: 0;
+        transition: 0.3s ease-in-out;
+        border-radius: 13px;
+    }
+    .nav-menu.active {
+        left: 0;
+        opacity: 1;
+        z-index: -1;
+        transition: 0.3s ease-in-out;
+    }
+
+    .navbar-logo-image {
+        width: 40px; /* Adjust the size as needed */
+        height: auto;
+        margin-left: 10px; /* Space between logo and title */
+    }
+    .nav-links {
+        display: block;
+        width: 100%;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .nav-links:hover {
+        background-color: #bccfd0;
+        transition: none;
+    }
+    .menu-icons {
+        display: block;
+        cursor: pointer;
+    }
+    .menu-icons i {
+        font-size: 1.4rem;
+    }
+    .navbar-logo {
+        color: white;
+        cursor: pointer;
+        font-size: large;
+        margin-left: 6px;
+        margin-top: 5px;
+    }
+    
+    .bars-bg {
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+
+    .cross-bg{
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+    
+    /* Title Styling */
+}
+/* Hide the navbar */
+.NavbarItems.scrolled.hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none; /* Prevent interactions while hidden */
+}
+
+/* Show the navbar */
+.NavbarItems.visible {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Style after scrolling */
+
+
+@media screen and (min-width: 1000px) {
+    .navbar-logo-image {
+    width: 60px; /* Adjust the size as needed */
+    height: auto;
+    margin-left: 40px; /* Space between logo and title */
+}
+
+/* Title Styling */
+.navbar-logo {
+    color: white;
+    cursor: pointer;
+    font-size: x-large;
+    margin-left: 6px;
+    margin-top: 5px;
+}
+}

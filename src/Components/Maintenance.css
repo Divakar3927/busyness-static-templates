@@ -1,0 +1,55 @@
+/* General Layout */
+.maintenance-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full height */
+    background-color: #f5f5f5; /* Light background color */
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* GIF Styling */
+  .maintenance-gif {
+    max-width: 100%; /* Responsive GIF */
+    height: auto;
+  }
+  
+  /* Button Styling */
+  .back-to-home-btn {
+    background-color: #100441;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+  }
+  
+  .back-to-home-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+  }
+  
+  .back-to-home-btn:active {
+    background-color: #004085;
+    transform: translateY(1px);
+  }
+  
+  .back-to-home-btn:focus {
+    outline: none;
+  }
+  

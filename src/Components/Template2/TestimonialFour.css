@@ -1,0 +1,46 @@
+.gradient-custom {
+  background: radial-gradient(50% 123.47% at 50% 50%, #1f6e3d 0%, #004d1a 100%),
+    linear-gradient(121.28deg, #006837 0%, #39a845 100%),
+    linear-gradient(360deg, #005e33 0%, #88ffb4 100%),
+    radial-gradient(100% 164.72% at 100% 100%, #1b7930 0%, #57ff96 100%),
+    radial-gradient(100% 148.07% at 0% 0%, #7dffa3 0%, #3b8f67 100%);
+  background-blend-mode: screen, color-dodge, overlay, difference, normal;
+}
+
+
+
+.carousel-indicators {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+
+
+/* Increase card height */
+.card {
+  min-height: 350px; /* Adjust this as needed for more height */
+  background-color: #2c2c2c; /* Dark background */
+  color: #ffffff; /* Light text */
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  padding: 2.5rem;
+}
+
+/* Customize text color */
+.title-text,
+.sub-title {
+  color: #ffffff;
+}
+
+/* Dark theme adjustments */
+.carousel-item p {
+  color: #b3b3b3; /* Slightly lighter text color for the quotes */
+}
+
+.fa-quote-left,
+.fa-quote-right {
+  color: #ffa500; /* Accent color for quotes */
+}
